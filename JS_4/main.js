@@ -1,6 +1,6 @@
 function RandomCoordinates(){
-	var left = Math.floor(Math.random() * 80);
-	var top = Math.floor(Math.random() * 80);
+	var left = Math.floor(Math.random() * 70);
+	var top = Math.floor(Math.random() * 60);
 	var element = document.getElementById("block");
 	var left = element.style.left = left + "%";
 	var top = element.style.top = top + "%";
@@ -51,6 +51,7 @@ function border(){
 	var d = tinycolor(a).spin(180).toString();
 	var e = tinycolor(b).spin(180).toString();
 	var f = tinycolor.mix(d, e, amount = 50);
+	
 	if(tinycolor.isReadable(a,b) == false){
 		document.getElementById("block").style.borderColor = f;
 	}
@@ -62,8 +63,8 @@ function backcolor(){
 $(document).ready(function(){
 	$(":button").click(function(){
 		var backcolor, box;
-		backcolor = document.getElementById("body").style.backgroundColor;
-		box = document.getElementById("block").style.backgroundColor;
+		backcolor = tinycolor(document.getElementById("body").style.backgroundColor).toHexString();
+		box = tinycolor(document.getElementById("block").style.backgroundColor).toHexString();
 		$.ajax({
 			type: "POST",
 			url: "data.php",
