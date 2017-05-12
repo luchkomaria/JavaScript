@@ -16,11 +16,15 @@ function change(){
 	var name = randomblock();
 	var now = document.getElementById(name).style.backgroundColor;
 	if(now == ""){
-	document.getElementById(name).style.backgroundColor = getRandomColor();}
+	document.getElementById(name).style.backgroundColor = "red";}
 	else {
 	document.getElementById(name).style.backgroundColor = getRandomColor();
-	time-=100;
+		if(time>=100){
+			time-=100;
+		}
+		else{
+			time=1;
+			}
 	}
 }
-
-var timer = setInterval(change, time);
+setInterval(change, time);
