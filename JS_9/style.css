@@ -1,0 +1,38 @@
+@charset "utf-8";
+.menu{
+	display: block;
+	float: left;
+	font-size: 30px;
+	padding-right: 100px;
+	padding-top: 30px;
+	}
+#container{
+	width:1000px;
+	margin: 0 auto;}
+ul{
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
+	list-style: none;
+}
+li>a{
+	text-decoration:none;
+	color:black;}
+nav{
+	background-color:#435666;
+	width: 1000px;
+	height:100px;
+	}
+body{
+	background-color:#97ABD0;}
+#login{
+	background-color: #29536E;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
+	width: 200px;
+	padding: 20px;
+}
+/* CSS Document */
